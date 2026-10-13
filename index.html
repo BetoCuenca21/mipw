@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Los Compas - PWA</title>
+  
+  <!-- Vinculación del Manifiesto y Estilos -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#ff6b81">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">🍬 Dulcería Los Compas</div>
+    <div id="status-badge" class="badge online">En línea</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>¡Los dulces más deliciosos a un solo clic!</h1>
+      <p>Disfruta de nuestros chocolates, gomitas y caramelos artesanales.</p>
+      
+      <!-- Botón controlado por el evento beforeinstallprompt -->
+      <button id="install-btn" class="btn btn-install">📱 Instalar Aplicación</button>
+      <button id="notif-btn" class="btn btn-notif">🔔 Recibir Ofertas y Promociones</button>
+    </section>
+
+    <section class="products">
+      <h2>Nuestros Dulces Populares</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">🍫</div>
+          <h3>Chocolates Artesanales</h3>
+          <p>Deliciosas trufas y barras de chocolate con avellana.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🐻</div>
+          <h3>Gomitas Frutales</h3>
+          <p>Suaves gomitas ácidas y dulces con sabor natural.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🍭</div>
+          <h3>Paletas de Caramelo</h3>
+          <p>Caramelos macizos hechos a mano con diseños únicos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mensaje flotante (Toast) para notificar al usuario en pantalla -->
+<div id="toast" class="toast"></div>
+
+<!-- Sección de prueba de registro / pedido -->
+<section class="card" style="margin-top: 2rem;">
+  <h3> Haz un Pedido / Guarda Datos</h3>
+  <p>Prueba a guardar datos estando offline para ver la magia de la sincronización.</p>
+  
+  <input type="text" id="pedido-input" placeholder="Ej. 1kg de Obleas y Chocolates" style="width: 80%; padding: 0.8rem; margin: 1rem 0; border: 1px solid #ccc; border-radius: 8px;">
+  <br>
+  <button id="btn-guardar" class="btn btn-notif"> Guardar Pedido</button>
+</section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Dulcería Mágica - Funciona con o sin conexión.</p>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="js/app.js"></script>
+</body>
+</html>
